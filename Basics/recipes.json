@@ -1,0 +1,33 @@
+[
+    {
+        "name" : "Tuna Omelette", 
+        "img" : "", 
+        "desc" : "bla", 
+        "ingrds" : ["", ""], 
+        "steps" : ["", ""]
+    },
+
+    {
+        "name" : "Egg Sandwich", 
+        "img" : "", 
+        "desc" : "bla", 
+        "ingrds" : ["", ""], 
+        "steps" : ["", ""]
+    },
+
+    {
+        "name" : "Chocolate Chip Cookies", 
+        "img" : "", 
+        "desc" : "bla", 
+        "ingrds" : ["", ""], 
+        "steps" : ["", ""]
+    },
+
+    {
+        "name" : "Coffee Jelly", 
+        "img" : "", 
+        "desc" : "A sweet dessert.", 
+        "ingrds" : ["Coffee", "Jelly"], 
+        "steps" : ["Step 1 stuff", "Step 2 stuff", "Step 3 stuff"]
+    }
+]
