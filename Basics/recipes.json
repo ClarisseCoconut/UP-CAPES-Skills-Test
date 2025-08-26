@@ -1,33 +1,42 @@
 [
     {
         "name" : "Tuna Omelette", 
-        "img" : "", 
-        "desc" : "bla", 
-        "ingrds" : ["", ""], 
-        "steps" : ["", ""]
+        "img" : "/basics/images/tuna egg.jpg", 
+        "desc" : "A very easy to cook meal taught to me by my dad.", 
+        "ingrds" : ["1 can of Century Tuna Premium", "4 eggs", "1/2 sachet of Magic Sarap"], 
+        "steps" : [
+            "Mix all the eggs with the Magic Sarap. Beat until well combined.", 
+            "Put the egg mixture on a hot pan with the tuna and mix. Break down the chunks of tuna as you do. Make sure to not let the eggs at the bottom of the pan burn.",
+            "Continue mixing until the eggs are just a bit undercooked. The heat from the pan will cook it the rest of the way.",
+            "Done!"
+        ]
     },
 
     {
         "name" : "Egg Sandwich", 
-        "img" : "", 
-        "desc" : "bla", 
-        "ingrds" : ["", ""], 
-        "steps" : ["", ""]
+        "img" : "/basics/images/egg sandwich.jpg", 
+        "desc" : "A delicious egg sandwich that I like to store as a midnight snack.", 
+        "ingrds" : ["boiled eggs", "Lady's Choice Mayonnaise", "salt of choice (I like to use garlic salt!)", "pepper", "bread slices"], 
+        "steps" : [
+            "Mash the boiled eggs in a bowl, leaving chunks.", 
+            "Add mayonnaise, a dash of salt, and some pepper to the mashed eggs. Mix, making sure not to further destroy the egg chunks.",
+            "The spread is done! Put in on your bread and enjoy."
+        ]
     },
 
     {
         "name" : "Chocolate Chip Cookies", 
-        "img" : "", 
-        "desc" : "bla", 
-        "ingrds" : ["", ""], 
-        "steps" : ["", ""]
+        "img" : "/basics/images/cookies.jpg", 
+        "desc" : "The very first thing I learned to bake. A beloved dessert for sweet tooths.", 
+        "ingrds" : ["All-purpose flour", "Chocolate chips", "butter", "white sugar", "brown sugar", "baking soda", "baking powder"], 
+        "steps" : ["Step 1 stuff", "Step 2 stuff", "Step 3 stuff", "bakeeEe"]
     },
 
     {
         "name" : "Coffee Jelly", 
-        "img" : "", 
+        "img" : "/basics/images/coffeejelly.jpg", 
         "desc" : "A sweet dessert.", 
-        "ingrds" : ["Coffee", "Jelly"], 
+        "ingrds" : ["coffee powder", "milk", "clear-colored jelly powder", "sugar"], 
         "steps" : ["Step 1 stuff", "Step 2 stuff", "Step 3 stuff"]
     }
 ]

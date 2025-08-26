@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Clarisse's Cookbook</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  </head>
+
+  <body>
+    <div id="nav"></div>
+
+    <h1 id="name">Oops! This recipe doesn't exist.</h1>
+    <img id="img" style="max-width: 640px; width: 100%; height: auto;">
+    <p id="desc">You're gonna have to look somewhere else on the internet for this recipe, bud. Sorry!</p>
+    <h3>Ingredients:</h3>
+    <ul id="ingrds">A dash of nothing.</ul>
+    <h3>Steps:</h3>
+    <ol id="steps">👣👣👣</ol>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // load navbar
+      $(function(){
+        $("#nav").load("navbar.html");
+      });
+
+      fetch('recipes.json')
+        .then(response => response.json())
+        .then(data => {
+            // get current path (e.g. /adobo)
+            let pathParts = window.location.pathname.split("/"); 
+            let recipeName = pathParts[pathParts.length - 1].replace(".html", "").toLowerCase(); 
+            console.log(recipeName)
+        
+            // find recipe whose name matches the path
+            let recipe = data.find(r => r.name.toLowerCase().replace(/\s+/g, '') === recipeName);
+        
+            if (recipe) {
+              console.log(recipe)
+              // fill in details
+              document.getElementById("name").innerHTML = recipe.name;
+              document.getElementById("img").src = recipe.img;
+              document.getElementById("desc").innerHTML = recipe.desc;
+            
+              // ingredients
+              let ingrds = document.getElementById("ingrds");
+              ingrds.innerHTML = ""; // clear placeholder
+              recipe.ingrds.forEach(item => {
+                let li = document.createElement("li");
+                li.textContent = item;
+                ingrds.appendChild(li);
+              });
+            
+              // steps
+              let steps = document.getElementById("steps");
+              steps.innerHTML = ""; // clear placeholder
+              recipe.steps.forEach(step => {
+                let li = document.createElement("li");
+                li.textContent = step;
+                steps.appendChild(li);
+              });
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching or parsing JSON:', error);
+        });
+    </script>
+  </body>
+</html>
